@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "atp-client"
+version = "1.0.0"
+description = "FinanceATP API Client - ATP通貨管理APIのGUIクライアント"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "FinanceATP Team"}
+]
+keywords = ["finance", "atp", "api", "client"]
+
+dependencies = [
+    "requests>=2.25.0",
+]
+
+[project.scripts]
+atp-client = "atp_client:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]

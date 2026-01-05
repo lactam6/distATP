@@ -215,10 +215,20 @@ curl -X POST http://localhost:3000/api/v1/admin/mint \
 | `finance_atp.tar`    | Dockerイメージ          |
 | `docker-compose.yml` | コンテナ構成            |
 | `.env.example`       | 環境変数の設定例        |
+| `atp_client/`        | Python GUIクライアント  |
 | `start.bat`          | Windows起動スクリプト   |
 | `start.sh`           | Mac/Linux起動スクリプト |
 | `QUICKSTART.md`      | クイックスタートガイド  |
 | `readme.md`          | 本ドキュメント          |
+
+### ATP Client のインストール
+
+```bash
+cd atp_client
+pip install .
+```
+
+インストール後、`atp-client` コマンドで起動できます。
 
 ---
 
