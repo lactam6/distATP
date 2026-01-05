@@ -1,3 +1,14 @@
+Metadata-Version: 2.4
+Name: finance-atp-client
+Version: 1.0.0
+Summary: FinanceATP API Client - ATP通貨管理APIのGUIクライアント
+Author: FinanceATP Team
+License: MIT
+Keywords: finance,atp,api,client
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: requests>=2.25.0
+
 # ATP Client
 
 FinanceATP API のGUIクライアントアプリケーション
@@ -5,8 +16,11 @@ FinanceATP API のGUIクライアントアプリケーション
 ## インストール
 
 ```bash
-cd atp_client
+# パッケージをインストール
 pip install .
+
+# または開発モード（編集可能インストール）
+pip install -e .
 ```
 
 ## 起動方法
@@ -20,10 +34,10 @@ atp-client
 ### Pythonモジュールとして起動
 
 ```bash
-python -m finance_atp_client
+python -m atp_client
 ```
 
-### 直接実行（インストールなし）
+### 直接実行
 
 ```bash
 python atp_client.py
@@ -45,26 +59,6 @@ python atp_client.py
 - ATP焼却 (Burn)
 - イベントログ参照
 - APIキー管理
-
-## EXEとしてビルド
-
-### ローカルでビルド
-
-```bash
-pip install pyinstaller
-pyinstaller --onefile --windowed --name "ATP-Client" atp_client.py
-```
-
-ビルド完了後、`dist/ATP-Client.exe` が生成されます。
-
-### GitHub Actions で自動ビルド
-
-タグをプッシュすると自動でexeがビルドされ、リリースとして公開されます。
-
-```bash
-git tag v1.0.0
-git push origin v1.0.0
-```
 
 ## ライセンス
 

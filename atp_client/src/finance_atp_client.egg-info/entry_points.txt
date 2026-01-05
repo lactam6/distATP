@@ -1,0 +1,5 @@
+[console_scripts]
+atp-client = finance_atp_client:main
+
+[gui_scripts]
+atp-client-gui = finance_atp_client:main

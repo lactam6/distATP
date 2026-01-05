@@ -1,9 +1,9 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
-name = "atp-client"
+name = "finance-atp-client"
 version = "1.0.0"
 description = "FinanceATP API Client - ATP通貨管理APIのGUIクライアント"
 readme = "README.md"
@@ -19,7 +19,13 @@ dependencies = [
 ]
 
 [project.scripts]
-atp-client = "atp_client:main"
+atp-client = "finance_atp_client:main"
 
-[tool.hatch.build.targets.wheel]
-packages = ["."]
+[project.gui-scripts]
+atp-client-gui = "finance_atp_client:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.md"]
