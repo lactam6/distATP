@@ -31,6 +31,31 @@ start.bat
 
 ---
 
+## ポート設定
+
+デフォルトではアプリケーションは **ポート3000** で起動します。
+
+ポートの衝突がある場合は、`.env` ファイルで変更できます。
+
+### 設定方法
+
+```bash
+# .env ファイルを作成
+cp .env.example .env
+
+# .env を編集してポートを変更
+APP_PORT=8080
+```
+
+### 起動後のアクセス
+
+| 設定            | アクセスURL           |
+| --------------- | --------------------- |
+| デフォルト      | http://localhost:3000 |
+| `APP_PORT=8080` | http://localhost:8080 |
+
+---
+
 ## 認証
 
 すべてのAPIリクエストには `X-API-Key` ヘッダーが必要です。
@@ -189,6 +214,7 @@ curl -X POST http://localhost:3000/api/v1/admin/mint \
 | -------------------- | ----------------------- |
 | `finance_atp.tar`    | Dockerイメージ          |
 | `docker-compose.yml` | コンテナ構成            |
+| `.env.example`       | 環境変数の設定例        |
 | `start.bat`          | Windows起動スクリプト   |
 | `start.sh`           | Mac/Linux起動スクリプト |
 | `QUICKSTART.md`      | クイックスタートガイド  |
